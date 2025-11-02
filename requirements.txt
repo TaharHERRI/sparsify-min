@@ -3,3 +3,4 @@ transformers>=4.42
 pandas
 matplotlib
 jupyter
+datasets
