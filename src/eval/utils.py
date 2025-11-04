@@ -4,7 +4,7 @@ def device_synchronize():
     if torch.cuda.is_available():
         torch.cuda.synchronize()
 
-def measure_latency_ms(fn, *args, warmup=3, iters=10) -> float:
+def measure_latency_ms(fn, *args, warmup=10, iters=50) -> float:
     for _ in range(warmup):
         _ = fn(*args)
     device_synchronize()
